@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+h3,h4,h5,h6{
+  margin: 0;
+}
+li{
+  list-style: none;
+}
+.LeftSidebar{
+  position: relative;
+  width: 55%;
+  height: 98%;
+  /* background-color:green; */
+}
+
+/* 左侧头部区域 */
+.head{
+  width: 100%;
+  height: 25%;
+  position: relative;
+  /* background-color: olivedrab; */
+}
+#headPortrait{
+  overflow:hidden;
+  width: 65px;
+  height: 65px;
+  position: absolute;
+  left: 35px;
+  top: 30px;
+  border:2px solid #575a6d ;
+  border-radius: 50%;
+  /* background: url('./headportrait.jpeg') none; */
+
+}
+#headPortrait img{
+
+  width: 65px;
+  height: 65px;
+}
+.HeaderText{
+  position: absolute;
+  right: 45px;
+  top: 34px;
+}
+.HeaderText h4{
+  font-size: 16px;
+  color: #3f3e5d;
+  margin: 0;
+}
+.HeaderText h4:nth-child(1){
+  color: #e47470;
+  margin-bottom:3px;
+}
+/* 左侧简历下部 */
+.LowerLeft{
+  box-sizing: border-box;
+  padding-top:132px ;
+  padding-right:33px ;
+  position: relative;
+  width: 100%;
+  height: 75%;
+  background-color:#434a67 ;
+}
+.TopBox{
+  position: absolute;
+  top: -60px;
+  left: 35px;
+  width: 195px;
+  height: 175px;
+  background-color: #e56b68;
+}
+.TopLeft{
+  position: absolute;
+  top: 20px;
+  left: 28px;
+}
+.TopLeft h4,
+.TopLeft h5{
+  font-size: 20px;
+  color: #fff;
+  margin: 0 0 5px 0 ;
+}
+.ButRight{
+  position: absolute;
+  bottom: 20px;
+  right: 28px;
+}
+.ButRight h6,
+.ButRight h5{
+ text-align:right;
+  color: #fff;
+  font-size: 13px;
+    margin: 6px 0 6px 0;
+}
+.butbox{
+  margin-left: 35px;
+}
+.titleText{
+  font-family: WawatiSC;
+  color: #e3ebed;
+  margin:5px 0 5px 0 ;
+}
+.butbox_content{
+  
+  border-left:1.5px solid #614b57 ;
+}
+.butbox_content ul{
+  color: #f76153 ;
+  padding-left:4px;
+}
+.butbox_content ul li{
+  position: relative;
+}
+.butbox_content ul li::before{
+  position: absolute;
+  top: 5px;
+  left: -7.3px;
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #f76153;
+}
+.butbox_content ul h4{
+  font-weight: 800;
+  font-size: 13px;
+}
+.butbox_content ul li h6{
+  margin: 10px 0 10px 0;
+  font-size: 8px;
+  color: #fff;
+}
+.special{
+  color: #5e6a84;
+}
+.butbox_content ul li:nth-child(2) span{
+  font-size: 7px;
+  color: #ff5a58;
+}
+.butbox_content ul li:nth-child(2) h6{
+  color: #a4abbd;
+}
+.butbox_content:nth-of-type(2) ul li h6{
+  color:#a4abbd;
+}
+.butbox_content:nth-of-type(2) ul li h5{
+  color: #fff;
+  margin-top: 5px;
+  font-size: 8px;
+}
