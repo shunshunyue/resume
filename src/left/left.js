@@ -5,34 +5,34 @@ import back from './log.jpeg'
 class Left extends React.Component{
   render(){
     return(
-        <div className='LeftSidebar'>
+        <div className='leftSidebar'>
           {/* <div className='Commentarea'>
                 <AxiosGet />
           </div> */}
           <div className='head'>
             <div id='headPortrait'><img alt='头像' src={back}></img></div>
-            <div className='HeaderText'>
+            <div className='headerText'>
               <h4>软 件 工 程</h4>
               <h4>SOFTWARE</h4>
               <h4>ENGINEERING</h4>
             </div>
           </div>
-         <div className='LowerLeft'>
-            <div className='TopBox'>
-              <div className='TopLeft'>
+         <div className='lowerLeft'>
+            <div className='topBox'>
+              <div className='topLeft'>
                 <h5>P R O F I L E </h5>
                 <h4>李 琦</h4>
               </div>
-              <div className='ButRight'>
+              <div className='butRight'>
                 <h5>男</h5>
                 <h5>上海</h5>
                 <h6>1993.10.21</h6>
               </div>
             </div>
-            <div className='butbox' >
+            <div className='butBox' >
               <h4 className='titleText'>教 育 经 历</h4>
               <h6 className='titleText'>EDUCATION BACKGROUND</h6>
-              <div className='butbox_content'>
+              <div className='butBoxContent'>
                 <ul>
                   <li>
                     <h4>上海觅知大学</h4>
@@ -48,7 +48,7 @@ class Left extends React.Component{
               </div>
               <h4 className='titleText'>工 作 经 历</h4>
               <h6 className='titleText'>WORK EXPERIENCE</h6>
-              <div className='butbox_content'>
+              <div className='butBoxContent'>
                 <ul>
                   <li>
                     <h4>觅知办公有限公司</h4>

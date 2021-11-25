@@ -4,7 +4,7 @@ import moment from 'moment'
 class AxiosGet extends React.Component{
     state={
         data:[],
-        newdata:{
+        newData:{
             name:'',
             msg:'',
             time:''
@@ -12,9 +12,9 @@ class AxiosGet extends React.Component{
         
     }
 componentDidMount(){
-    this.huoqu()
+    this.getData()
 }
-   huoqu=()=>{
+getData=()=>{
         const url= 'http://yapi.smart-xwork.cn/mock/84769/flora-test/list'
         axios.get(url)
              .then(response=>{
@@ -28,55 +28,44 @@ componentDidMount(){
       })
     }
     
-    handleSubmit=(e)=>{
-        e.preventDefault();
-    }
-    Aport=(e)=>{
+    InputProcessing=(e)=>{
         const name = this.refs.name.value 
         const msg = this.refs.msg.value
         const time=moment().format('YYYY-MM-DD HH:mm:ss');
-        const  newTestData=Object.assign({},this.state.newdata,{time:time,name:name,msg:msg});   
+        const  newTestData=Object.assign({},this.state.newData,{time:time,name:name,msg:msg});   
             this.setState({
-                newdata:newTestData
+                newData:newTestData
             })
         
-            if(this.state.newdata.name!==''&&this.state.newdata.msg!==''){
+            if(this.state.newData.name!=='' && this.state.newData.msg!==''){
                 const url= 'http://yapi.smart-xwork.cn/mock/84769/flora-test/add'
-                 axios.post(url, this.newdata)
+                 axios.post(url, this.newData)
                     .then( (response)=> {
-                        const newda=[...this.state.data]
-                        newda.push(this.state.newdata)
+                        const OldData=[...this.state.data]
+                        OldData.push(this.state.newData)
                         this.setState({
-                                 data:newda
+                                 data:OldData
                              })
-                        return
+
           })
-          .catch( (error)=> {
-            console.log(error);
-          });
-        }else{
-            return
-        }
-        return
-    }
-    Render=()=>{
-        return(
-            this.state.data.map((text,i)=>{
-                return (<ul key={i}>
-                    <li className='name'>姓名：{text.name}</li>
-                    <li className='say'> 说：{text.msg}</li>
-                    <li className='time'>{text.time}</li>
-                </ul>)
-                 })
-        )
+                        .catch( (error)=> {
+                            alert(error);
+                        });
+            }
     }
     render(){
         return(
             <div>
                   姓名：  <input ref='name' placeholder='请输入你的名称' type='text' ></input>
                    想说的话： <textarea  ref='msg' placeholder='请输入你想说的话' ></textarea>
-                    <button onClick={this.Aport}>发布</button>
-                     <div>{this.Render()}</div>   
+                    <button onClick={this.InputProcessing}>发布</button>
+                     {this.state.data.map((text,i)=>{
+                         return (<ul key={i}>
+                                     <li className='name'>姓名：{text.name}</li>
+                                     <li className='say'> 说：{text.msg}</li>
+                                     <li className='time'>{text.time}</li>
+                                 </ul>)
+                     })}
             </div>
         )
     }

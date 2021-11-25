@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
 }
-.RightSidebar{
+.rightSidebar{
     position: relative;
     width: 45%;
     height: 98%;
@@ -63,13 +63,13 @@
     outline: none;
     background-color: pink;
 }
-.Right_box{
+.rightBox{
     position: relative;
     width: 100%;
     height: 19%;
     /* background-color: aqua; */
   }
-.Right_head{
+.rightHead{
     position: absolute;
     top: 20px;
     left: 16px;
@@ -80,26 +80,27 @@
     flex-direction:column;
     justify-content: space-around;
 }
-.Right_head h3{
+.rightHead h3{
    
     color: #f85d65;
     font-size: 15px;
 }
-.head_content ul{
+.headContent,
+.headContent ul{
     text-align: center;
     display: flex;
     justify-content: flex-start;
     flex-wrap:wrap;
 
 }
-.head_content ul li{
+.headContent ul li{
     color: #3d4a64;
     margin-bottom: 10px;
     line-height: 10px;
     height: 10px;
     font-size: 7px;
 }
-.head_content ul li:nth-of-type(3n+1){
+.headContent ul li:nth-of-type(3n+1){
     width: 3px;
     height: 10px;
     margin:0 5px ;
@@ -108,35 +109,35 @@
 .IconFont{
     font-size: 11px;
 }
-.head_content ul li:nth-of-type(3n+2){
+.headContent ul li:nth-of-type(3n+2){
     font-size: 12px;
     margin-right:5px;
     color: #313f5c;
 }
-.Right_but{
+.rightBut{
     box-sizing: border-box;
     padding:0 8px 0  40px;
     width: 100%;
     height: 81%;
     /* background-color: aqua; */
 }
-.Right_but h3{
+.rightBut h3{
     font-size: 16px;
     color: #fb5352;
 }
-.Right_but h5{
+.rightBut h5{
     line-height: 18px;
     margin-top: 10px;
     font-size: 11px;
     font-weight: 600;
     color: #404d67;
 }
-.Right_but .Right_special{
+.rightBut .rightSpecial{
     margin-top: 20px;
     font-size: 16px;
     color:#35435f ;
 }
-.Right_special span{
+.rightSpecial span{
     color: #fb5352;
     font-size: 8.5px;
 }
@@ -167,13 +168,13 @@
     height: 4px;
     background-color:#ff585d ;
 }
-.Right_but h6{
+.rightBut h6{
     margin-top: 15px;
     line-height: 18px;
     color: #ff5a5d;
     font-size: 10px;
 }
-.Right_but .Specialcolor{
+.rightBut .Specialcolor{
     margin-top: 5px;
     color: #35435f;
 }
